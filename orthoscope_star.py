@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.9
 
 import sys
 import re, os, shutil
@@ -3209,7 +3209,7 @@ if not fMafOut:
 
 print("\n\n##### 1st tree: TRIMAL 1st round ######\n\n")
 trimLine1 = "tools/trimal -out " + eachDirAddress + "042_AA.fas.trm -htmlout " + eachDirAddress + "042_AA.fas.trm.html -in " + eachDirAddress + "040_mafOutAA.txt -gappyout"
-#print("trimLine1:", trimLine1, "\n");
+print("trimLine1:", trimLine1, "\n")
 subprocess.call(trimLine1, shell=True)
 
 fTMP = open(eachDirAddress + "042_AA.fas.trm")
@@ -3381,7 +3381,7 @@ make_2ndanalysis_seqFile(rootLeaves, outfile="150_noGapCDNAfas.txt")
 cDNAfas2noGapAAFasFile("150_noGapCDNAfas.txt", outfile="150_noGapAA.txt")
 
 print("\n\n##### 2nd tree: MAFFT ######\n\n")
-maffLine2 = "mafft " + eachDirAddress + "/150_noGapAA.txt > " + eachDirAddress + "160_mafOut.txt"
+maffLine2 = "tools/mafft " + eachDirAddress + "/150_noGapAA.txt > " + eachDirAddress + "160_mafOut.txt"
 ##print("maffLine2", maffLine2)
 subprocess.call(maffLine2, shell=True)
 
