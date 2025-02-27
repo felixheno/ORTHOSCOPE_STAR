@@ -2,34 +2,40 @@
 # S: Summarize results.
 # D: Draw phylogenetic trees.
 >Mode
-S
+E
 
 
 # Each line shows species names followed by an underscore and then database file names of amino acid and nucleotide
 # SpaciesName_color             Amino acide database     Nucleotide database
 >TaxonSampling
-Drosophila-melanogaster_Black Drosophila-melanogaster-SHN.pep.txt Drosophila-melanogaster-SHN.cds.txt   
-Ciona-intestinalis_Black      Ciona-intestinalis-SHN.pep.txt      Ciona-intestinalis-SHN.cds.txt       
-Xenopus-tropicalis_Magenta    Xenopus-tropicalis-SHN.pep.txt      Xenopus-tropicalis-SHN.cds.txt        
-Gallus-gallus_Magenta         Gallus-gallus-SHN.pep.txt           Gallus-gallus-SHN.cds.txt             
-Homo-sapiens_Magenta          Homo-sapiens-SHN.pep.txt            Homo-sapiens-SHN.cds.txt              
-Danio-rerio_Purple            Danio-rerio-SHN.pep.txt             Danio-rerio-SHN.cds.txt               
-Gasterosteus-aculeatus_Red    Gasterosteus-aculeatus-SHN.pep.txt  Gasterosteus-aculeatus-SHN.cds.txt    
-Tetraodon-nigroviridis_Green  Tetraodon-nigroviridis-SHN.pep.txt  Tetraodon-nigroviridis-SHN.cds.txt    
-Oryzias-latipes_Blue          Oryzias-latipes-SHN.pep.txt         Oryzias-latipes-SHN.cds.txt           
+BARISTOSUM_Black      BARISTOSUM.r1.pgsb.May2022.longest.aa.fa        BARISTOSUM.r1.pgsb.May2022.longest.cds.fa
+BDISTACHYON_Green     BDISTACHYON.longest.aa.fa       BDISTACHYON.longest.cds.fa
+BSYLVATICUM_Purple     BSYLVATICUM.longest.aa.fa       BSYLVATICUM.longest.cds.fa
+HVULGARE_Orange        HVULGARE.longest.aa.fa  HVULGARE.longest.cds.fa
+MNUTANS_Magenta MNUTANS.r1.pgsb.May2022.longest.aa.fa   MNUTANS.r1.pgsb.May2022.longest.cds.fa
+NLEU_Blue    NLEU.PGSB.V2_66.Sep2023.longest.aa.fa   NLEU.PGSB.V2_66.Sep2023.longest.cds.fa
+NPUBIFLORA_Red      NPUBIFLORA.r1.pgsb.May2022.longest.aa.fa        NPUBIFLORA.r1.pgsb.May2022.longest.cds.fa
+NSTRICTA_Black        NSTRICTA.r1.pgsb.Jun2022.longest.aa.fa  NSTRICTA.r1.pgsb.Jun2022.longest.cds.fa
+NTEN_Green    NTEN.PGSB.V2_66.Sep2023.longest.aa.fa   NTEN.PGSB.V2_66.Sep2023.longest.cds.fa
+OMILIACEUM_Purple      OMILIACEUM.r1.pgsb.May2022.longest.aa.fa        OMILIACEUM.r1.pgsb.May2022.longest.cds.fa
+OSATIVA_Orange OSATIVA.longest.aa.fa   OSATIVA.longest.cds.fa
+SBICOLOR_Magenta        SBICOLOR.longest.aa.fa  SBICOLOR.longest.cds.fa
+SLAGASCAE_Blue       SLAGASCAE.r1.pgsb.May2022.longest.aa.fa SLAGASCAE.r1.pgsb.May2022.longest.cds.fa
+VBROMOIDES_Red      VBROMOIDES.pgsb.r1.Sep2024.longest.aa.fa        VBROMOIDES.pgsb.r1.Sep2024.longest.cds.fa
+
 
 >SpeciesTree
-(Drosophila-melanogaster,(Ciona-intestinalis,((Xenopus-tropicalis,(Gallus-gallus,Homo-sapiens)Amniota)Tetrapoda,(Danio-rerio,((Tetraodon-nigroviridis,Gasterosteus-aculeatus)Eupercaria,Oryzias-latipes)Percomorpha)Teleostei)BonyVertebrates)Deuterostomia)Bilateria;
+((((((((HVULGARE,VBROMOIDES)corePooideae,(BDISTACHYON,BSYLVATICUM)Brachypodieae)PreCore,((((NTEN,NPUBIFLORA)Sti3,NLEU)Sti2,OMILIACEUM)Sti1,SLAGASCAE))Stipeae,MNUTANS)Poo2,NSTRICTA)Poo1,BARISTOSUM)Pooideae,OSATIVA)BOP,SBICOLOR)Poaceae;
 
 >QuerySpecies
-Oryzias-latipes
+BSYLVATICUM
 
 # This species node is used to find orthogroups within gene trees.
 >KeyNode
-BonyVertebrates
+PreCore
 
 >SpeciesWithGeneFunction
-Homo-sapiens
+HVULGARE
 
 >Outdir
 outdir
