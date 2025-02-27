@@ -1,5 +1,11 @@
 # ORTHOSCOPE_STAR    
 
+## FELIX STATUS
+
+The scripts run, but there is an __error__ in the pal2nal step because the annotated CDS and AA files from Thomas does not correspond perfectly codon-by-codon. The CDS sequences are likely the full genomic sequences with UTRs and all, and that is what's causing the error. The solution would be to trim away any non-coding CDS positions.
+
+## Original README content:
+
 13 MB
 
 ORTHOSCOPE* (star) is an analysis pipelie to infer evolutionary history of a gene. By estimating orthogroups and gene trees for a complete set of protein coding genes, ORTHOSCOPE* evaluates: 
